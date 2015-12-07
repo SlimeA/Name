@@ -1,29 +1,42 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="38" inline="false" x="-607" y="-478">
-    <value name="IF0">
-      <block type="sensor_object" id="64">
-        <field name="OBJECT">LEFTFRONT</field>
+  <block type="controls_repeat" id="158" inline="true" x="-639" y="-537">
+    <value name="TIMES">
+      <block type="math_number" id="159">
+        <field name="NUM">2</field>
       </block>
     </value>
-    <statement name="DO0">
-      <block type="oled_cleardisplay" id="73">
+    <statement name="DO">
+      <block type="movement_forward" id="144">
         <next>
-          <block type="oled_setcursor" id="110" inline="true">
-            <value name="STARTX">
-              <block type="math_number" id="117">
-                <field name="NUM">10</field>
+          <block type="controls_if" id="38" inline="false">
+            <value name="IF0">
+              <block type="sensor_object" id="64">
+                <field name="OBJECT">LEFTFRONT</field>
               </block>
             </value>
-            <value name="STARTY">
-              <block type="math_number" id="118">
-                <field name="NUM">20</field>
+            <statement name="DO0">
+              <block type="oled_cleardisplay" id="73">
+                <next>
+                  <block type="oled_setcursor" id="110" inline="true">
+                    <value name="STARTX">
+                      <block type="math_number" id="117">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                    <value name="STARTY">
+                      <block type="math_number" id="118">
+                        <field name="NUM">20</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_drawtext" id="134">
+                        <field name="TEXT">Unicorns are AWESOME</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
-            </value>
-            <next>
-              <block type="oled_drawtext" id="134">
-                <field name="TEXT">unicorns are awsome</field>
-              </block>
-            </next>
+            </statement>
           </block>
         </next>
       </block>
