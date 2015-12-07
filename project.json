@@ -1,0 +1,10 @@
+{
+    "name": "Name",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "project_type": "application",
+    "executable_type": "scratch",
+    "executable": "Name.xml",
+    "author": "SlimeA",
+    "minimum_firmware_version": 42
+}
